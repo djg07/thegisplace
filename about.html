@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Blog Post - Start Bootstrap Template</title>
+    <!-- Custom CSS-->
+    <link href='css/styles.css' rel='stylesheet' type='text/css'>
+
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/blog-post.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+    </nav>
+    <script>
+        $('nav').load("html/header.html");
+    </script>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="banner">The GIS Place - A GIS Tutorial Resource</div>
+
+            </div>
+            </div>
+        <div class="row">
+
+            <!-- Blog Post Content Column -->
+            <div class="col-lg-8">
+            <h2>About Me</h2>
+                <p>I'm just a guy who's looking to give back to the GIS community.</p>
+                <p>I hold an Undegraduate Degree in Computer Science and a Master's Degree in Spatial Analytics/GIS. My day
+                job is a GIS Developer in the Health Sciences field where I combine my knowledge of GIS and Computer Science to
+                create new and innovative GIS tools. </p>
+
+            </div>
+
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4">
+
+                <!-- Blog Search Well -->
+                <!--<div class="well">-->
+                    <!--<h4>Blog Search</h4>-->
+                    <!--<div class="input-group">-->
+                        <!--<input type="text" class="form-control">-->
+                        <!--<span class="input-group-btn">-->
+                            <!--<button class="btn btn-default" type="button">-->
+                                <!--<span class="glyphicon glyphicon-search"></span>-->
+                        <!--</button>-->
+                        <!--</span>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; /.input-group &ndash;&gt;-->
+                <!--</div>-->
+
+                <!--Blog categories was right here-->
+                <div id="blogContainer"></div>
+                <script>
+                    $('#blogContainer').load("html/blogCategoriesSidebar.html");
+
+                </script>
+
+                <!--&lt;!&ndash; Side Widget Well &ndash;&gt;-->
+                <!--<div class="well">-->
+                    <!--<h4>Side Widget Well</h4>-->
+                    <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>-->
+                <!--</div>-->
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; The GIS Place 2015</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+
+
+</body>
+
+</html>
