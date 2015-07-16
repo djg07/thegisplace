@@ -10,3 +10,8 @@ p {
     font-size:30pt;
 
 }
+
+.adsbygoogle {
+    display: block; !important
+    margin: 0 auto;
+}
