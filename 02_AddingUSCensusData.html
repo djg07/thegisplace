@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="The GIS Place is a tutorial resource for individuals looking to perform GIS Analysis.">
+    <meta name="author" content="">
+
+    <title>The GIS Place - A GIS Tutorial Resource - Home</title>
+    <!-- Custom CSS-->
+    <link href='css/styles.css' rel='stylesheet' type='text/css'>
+
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/blog-post.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Google Analytics-->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('send', 'pageview');
+
+    </script>
+</head>
+
+<body>
+<!-- Google Adsense-->
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Top Bar -->
+<div>
+    <ins class="adsbygoogle"
+         style="display:block;width:728px;height:90px;margin:0 auto"
+         data-ad-client="ca-pub-4328350129655971"
+         data-ad-slot="7699621242"></ins>
+</div>
+
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+</nav>
+<script>
+    $('nav').load("html/header.html");
+</script>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="banner">The GIS Place - A GIS Tutorial Resource</div>
+
+        </div>
+    </div>
+    <div class="row">
+
+        <!-- Blog Post Content Column -->
+        <div class="col-lg-8">
+
+            <!-- Blog Post -->
+
+            <!-- Title -->
+            <h1>Downloading and Adding US Census Data to ArcGIS </h1>
+
+            <!--<h2>-->
+                <!--<small>A STEP BY STEP TUTORIAL USING THE NETWORK ANALYST EXTENSION</small>-->
+            <!--</h2>-->
+
+            <!-- Author -->
+            <p class="lead">
+                <!--by <a href="#">Start Bootstrap</a>-->
+            </p>
+
+            <hr>
+
+            <!-- Date/Time -->
+            <p><span class="glyphicon glyphicon-time"></span> Posted on July 17th, 2015 at 9:00 PM</p>
+
+            <hr>
+            <p>The United State Census Bureau collects a plethora of social and demographic data related to Americans. In addition, it also contains some pretty handy Boundary
+                files such as States, Census Tract (CTs), Dissemination Areas (DAs) and Blocks which can be joined with your own personal data for some pretty nifty analysis.
+            </p>
+            <p>This tutorial is going to walk you through, step by step, how to download and add spatial data from the US Census Bureau to ArcGIS Desktop.</p>
+
+            <h2>Step 1 - Download the Data</h2>
+            <p>Head on over to the <a href="https://www.census.gov/geo/maps-data/data/tiger.html">US Census Bureau Website</a> for a peek at the available datasets.
+                We're going to be using the <strong>TIGER/Line with Selected Demographic and Economic Data</strong> so go ahead and click that link as seen below
+
+            </p>
+            <img class="img-responsive" src="images/02_AddingUSCensusData/01.png" alt="">
+
+            <p>On the resulting page, we want to grab the 2010 Census Demographic Profile in Shapefile Format. Go ahead and click it like in the image below</p>
+            <img class="img-responsive" src="images/02_AddingUSCensusData/02.png" alt="">
+            <p>Next, click <strong>Counties</strong> to download the data</p>
+            <img class="img-responsive" src="images/02_AddingUSCensusData/03.png" alt="">
+
+            <h2>Step 2 - Copy the Downloaded Data into a Temporary Folder</h2>
+            <p>This step is crucial in order to import your data into ArcGIS.
+            Head on over to your desktop and make a new folder named <strong>Temp</strong>.
+                Next, navigate over to the downloaded Census .zip file, open it, and copy and paste its contents into your <strong>Temp Folder on your desktop</strong>
+            </p>
+
+            <h2>Step 3 - Adding the Data into ArcGIS</h2>
+            <p>Boot up ArcGIS and create a new .mxd document. Next click, on the <strong>add data icon</strong> as seen below:</p>
+            <img class="img-responsive" src="images/02_AddingUSCensusData/06.png" alt="">
+            <p>From there, we want to click on the tiny folder icon with the <strong>+</strong> ontop of it in order to connect to the <strong>Temp Folder</strong>
+            we created earlier like so:</p>
+            <img class="img-responsive" src="images/02_AddingUSCensusData/07.png" alt="">
+            <p>In the resulting dialogue box, navigate to your Desktop, then to the <strong>Temp Folder</strong> which contains the County Files</p>
+            <p>Finally, double click the <strong>County_2010Census_DP1.shp</strong> file like so: </p>
+            <img class="img-responsive" src="images/02_AddingUSCensusData/08.png" alt="">
+            <p>And Voila, you've added your data to ArcMap.</p>
+            <img class="img-responsive" src="images/02_AddingUSCensusData/final.png" alt="">
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <!-- Blog Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+            <!-- Blog Search Well -->
+            <!--<div class="well">-->
+            <!--<h4>Blog Search</h4>-->
+            <!--<div class="input-group">-->
+            <!--<input type="text" class="form-control">-->
+            <!--<span class="input-group-btn">-->
+            <!--<button class="btn btn-default" type="button">-->
+            <!--<span class="glyphicon glyphicon-search"></span>-->
+            <!--</button>-->
+            <!--</span>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /.input-group &ndash;&gt;-->
+            <!--</div>-->
+
+            <!--Blog categories was right here-->
+            <div id="blogContainer"></div>
+            <script>
+                $('#blogContainer').load("html/blogCategoriesSidebar.html");
+
+            </script>
+
+            <!--&lt;!&ndash; Side Widget Well &ndash;&gt;-->
+            <!--<div class="well">-->
+            <!--<h4>Side Widget Well</h4>-->
+            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>-->
+            <!--</div>-->
+
+        </div>
+
+        <div class="col-md-4">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- Right Side Panel -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:300px;height:600px;"
+                 data-ad-client="ca-pub-4328350129655971"
+                 data-ad-slot="4466953247"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; The GIS Place 2015</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>
+
+</div>
+<!-- /.container -->
+
+
+</body>
+
+</html>
